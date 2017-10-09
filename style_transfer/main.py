@@ -26,7 +26,8 @@ from PIL import Image
 import  matplotlib.pyplot as plt
 
 import torchvision.transforms as transforms
-import torchvision.models as models
+#import torchvision.models as models
+from vgg import *
 
 #Cuda parameters
 use_cuda = torch.cuda.is_available()
@@ -125,7 +126,11 @@ class StyleLoss(nn.Module):
 
 
 #Load a pretrained_model
-cnn = models.vgg19(pretrained=True).features
+#cnn = models.vgg19(pretrained=True).features
+#cnn = vgg19(pretrained=True).features
+cnn = vgg19()
+cnn.load_state_dict(torch.load("../pretrained/vgg19.pth"))
+cnn = cnn.features
 
 if use_cuda:
     cnn = cnn.cuda()
@@ -214,7 +219,7 @@ input = nn.Parameter(input.data)
 optimizer = optim.LBFGS([input])
 
 run = [0]
-while run[0] <= 300:
+while run[0] <= 100:
 
     def closure():
         #correct the values of updated input image

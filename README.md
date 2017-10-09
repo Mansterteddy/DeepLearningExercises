@@ -1,7 +1,19 @@
 # pyTorch_Code
-This repository includes some deep learning codes using pyTorch, I implement some interesting works, and try to build my own pyTorch deep learning model.
 
-Now this repository includes code as follows:
- 
-1. Hair Classification.
-2. Helper function for MNIST Dataloader.
+This repository includes some deep learning codes using pyTorch, such as:
+
+1. Human segmentation
+
+2. Human part segmentation
+
+3. Human 2D pose estimation 
+
+4. Human 3D pose estimation
+
+5. Human depth estimation
+
+6. Human normal estimation
+
+7. Kaggle dogs vs. cats
+
+8. CIFAR 10

@@ -29,6 +29,7 @@ loss = torch.add(torch.add(torch.add(torch.pow(xy[0], 2), torch.mul(xy[0], xy[1]
 print "loss: ", loss
 loss.backward()
 print(xy.grad)
+print(xy)
 
 criterion = Optim_Function()
 print "res: ", criterion(xy)
