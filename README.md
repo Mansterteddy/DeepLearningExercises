@@ -1,6 +1,6 @@
-# pyTorch_Code
+# Deep Learning Exercises
 
-This repository includes some deep learning codes using pyTorch, such as:
+This repository includes some deep learning codes, such as:
 
 1. Human segmentation
 
