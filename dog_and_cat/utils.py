@@ -30,14 +30,6 @@ def get_mean_and_std(dataset):
     std.div_(len(dataset))
     return mean, std
 
-# import torchvision
-# import torchvision.transforms as transforms
-# transform = transforms.Compose([transforms.ToTensor()])
-# dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=False, transform=transform)
-# mean, std = get_mean_and_std(dataset)
-# print(mean)
-# print(std)
-
 def init_params(net):
     '''Init layer parameters.'''
     for m in net.modules():
@@ -53,20 +45,20 @@ def init_params(net):
             if m.bias:
                 init.constant(m.bias, 0)
 
-
 _, term_width = os.popen('stty size', 'r').read().split()
 term_width = int(term_width)
 
-TOTAL_BAR_LENGTH = 86.
+TOTAL_BAR_LENGTH = 65.
 last_time = time.time()
 begin_time = last_time
 
 def progress_bar(current, total, msg=None):
+
     global last_time, begin_time
     if current == 0:
         begin_time = time.time()  # Reset for new bar.
 
-    cur_len = int(TOTAL_BAR_LENGTH*current/total)
+    cur_len = int(TOTAL_BAR_LENGTH * current / total)
     rest_len = int(TOTAL_BAR_LENGTH - cur_len) - 1
 
     sys.stdout.write(' [')
@@ -83,8 +75,8 @@ def progress_bar(current, total, msg=None):
     tot_time = cur_time - begin_time
 
     L = []
-    L.append('  Step: %s' % format_time(step_time))
-    L.append(' | Tot: %s' % format_time(tot_time))
+    #L.append('  Step: %d / %d' % current+1, total)
+    L.append('Used Time: %s' % format_time(tot_time))
     if msg:
         L.append(' | ' + msg)
 
@@ -94,9 +86,9 @@ def progress_bar(current, total, msg=None):
         sys.stdout.write(' ')
 
     # Go back to the center of the bar.
-    for i in range(term_width-int(TOTAL_BAR_LENGTH/2)):
-        sys.stdout.write('\b')
-    sys.stdout.write(' %d/%d ' % (current+1, total))
+    #for i in range(term_width-int(TOTAL_BAR_LENGTH/2)):
+     #   sys.stdout.write('\b')
+    #sys.stdout.write(' %d/%d ' % (current+1, total))
 
     if current < total-1:
         sys.stdout.write('\r')
