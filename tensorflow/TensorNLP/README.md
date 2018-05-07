@@ -1,1 +1,0 @@
-For TensorNLP, we provide tensorboard support, pretrained glove vector load and model save support.

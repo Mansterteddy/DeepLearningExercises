@@ -5,7 +5,7 @@ class Model:
 
 	def __init__(self):
 		
-		self.datadir = "./MNIST_data/"
+		self.datadir = "/Users/manster/Documents/Dataset/MNIST_data/"
 		
 	def read_mnist(self):
 
