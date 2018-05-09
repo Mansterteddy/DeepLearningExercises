@@ -1,1 +1,0 @@
-For kaggle dog and cat, we provide a clear frontend including multiple nets (AlexNet, VGGNet, ResNet, GoogleNet, DenseNet) and pretrained model load.
