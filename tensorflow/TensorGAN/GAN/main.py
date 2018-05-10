@@ -14,7 +14,7 @@ tf.set_random_seed(seed)
 
 def main():
     gan = net.GAN(config)
-    net.train(gan, util.DataDistribution(), util.GeneratorDistribution(range=8), config)
+    gan.train(util.DataDistribution(), util.GeneratorDistribution(range=8), config)
 
 if __name__=="__main__":
     main()
