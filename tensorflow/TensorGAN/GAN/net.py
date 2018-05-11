@@ -45,7 +45,7 @@ def optimizer(loss, var_list):
 
 def log(x):
     '''
-    Sometimes discriminator outputs can reach vakyes close to (or even slightly less than) zero due to numerical rounding.
+    Sometimes discriminator outputs can reach values close to (or even slightly less than) zero due to numerical rounding.
     This just make sure that we exclude those values so that we don't up with NaNs during optimization
     '''
     return tf.log(tf.maximum(x, 1e-5))
