@@ -9,8 +9,8 @@ np.random.seed(seed)
 tf.set_random_seed(seed)
 
 def main():
-    cgan = net.CGAN(config)
-    cgan.train()
+    gan = net.GAN(config)
+    gan.train()
 
 if __name__ == "__main__":
     main()
