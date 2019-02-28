@@ -31,7 +31,7 @@ with tf.Session() as sess:
     # Start training
     training_iters = 1000
     for step in range(training_iters):
-        if step % 20 == 0 or (step + 1)==training_iters:
+        if step % 20 == 0 or (step + 1) == training_iters:
             print(step, sess.run(W), sess.run(b))
 
         _ = sess.run([train_optimizer])
