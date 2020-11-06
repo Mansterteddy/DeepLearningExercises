@@ -2,7 +2,7 @@ import torch
 from matplotlib import pyplot as plt
 
 x = torch.linspace(0, 5, 100, requires_grad=True)
-y = (x**2).cos()
+y = (x**3 - 6 * x**2 + 8 * x)
 
 print(x)
 print(y)
