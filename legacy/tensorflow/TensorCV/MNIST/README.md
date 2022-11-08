@@ -1,1 +1,0 @@
-For MNIST, we implement Softmax and LeNet, we provide a clean frontend. You can put MNIST dataset in folder 'MNIST_data'. Accuracy for Softmax is 92.4%, accuracy for LeNet is 99.2%.

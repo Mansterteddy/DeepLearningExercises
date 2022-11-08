@@ -1,4 +1,5 @@
 *.onnx
+*.pt
 *.txt
 *.bin
 *.dll
